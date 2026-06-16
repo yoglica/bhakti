@@ -1,0 +1,279 @@
+@import "tailwindcss";
+
+/* Force light mode only */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* =====================================================
+VAISHNAVA / BHAKTI THEME
+===================================================== */
+
+:root {
+/* Backgrounds */
+--background: #ffffff;
+--foreground: #3e3023;
+--light-bg: #fbf5ed;
+
+/* Brand Colors */
+--primary: #d98e04; /* Saffron */
+--primary-hover: #b87400;
+
+--secondary: #6b7280;
+--accent: #6b8e23; /* Tulsi Green */
+
+/* Status Colors */
+--success: #4f7c3a;
+--warning: #c47a00;
+--error: #b84a3a;
+
+/* UI */
+--border: #e8ddca;
+--card-bg: #fffdf8;
+
+--card-shadow:
+0 2px 8px rgba(62, 48, 35, 0.05),
+0 1px 3px rgba(62, 48, 35, 0.03);
+
+--hover-shadow:
+0 12px 24px rgba(62, 48, 35, 0.08),
+0 4px 8px rgba(62, 48, 35, 0.04);
+}
+
+/* =====================================================
+BASE
+===================================================== */
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background-color: var(--background);
+color: var(--foreground);
+
+font-family:
+Inter,
+"Noto Serif",
+Georgia,
+serif;
+
+line-height: 1.7;
+
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+/* =====================================================
+TYPOGRAPHY
+===================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+color: #000;
+font-weight: 600;
+letter-spacing: -0.02em;
+line-height: 1.2;
+}
+
+p {
+color: #000;
+line-height: 1.8;
+}
+
+strong {
+color: #000;
+}
+
+a {
+color: var(--primary);
+text-decoration: none;
+transition: color 0.2s ease;
+}
+
+a:hover {
+color: var(--primary-hover);
+}
+
+/* =====================================================
+LAYOUT
+===================================================== */
+
+.container-custom {
+max-width: 80rem;
+margin-left: auto;
+margin-right: auto;
+padding-left: 1rem;
+padding-right: 1rem;
+}
+
+/* =====================================================
+CARDS
+===================================================== */
+
+.card {
+background-color: var(--card-bg);
+border: 1px solid var(--border);
+border-radius: 1rem;
+box-shadow: var(--card-shadow);
+
+transition:
+box-shadow 0.25s ease,
+transform 0.25s ease;
+}
+
+.card:hover {
+box-shadow: var(--hover-shadow);
+transform: translateY(-2px);
+}
+
+/* =====================================================
+BUTTONS
+===================================================== */
+
+.btn-primary {
+background-color: var(--primary);
+color: #ffffff;
+
+padding: 0.75rem 1.5rem;
+border-radius: 0.75rem;
+
+font-weight: 500;
+
+transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+background-color: #f4eee2;
+color: #000;
+
+border: 1px solid var(--border);
+
+padding: 0.75rem 1.5rem;
+border-radius: 0.75rem;
+
+font-weight: 500;
+
+transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+background-color: #ece3d3;
+}
+
+/* =====================================================
+GRADIENTS
+===================================================== */
+
+.gradient-primary {
+background: linear-gradient(
+135deg,
+#d98e04 0%,
+#b87400 100%
+);
+}
+
+.gradient-soft {
+background: linear-gradient(
+135deg,
+#faf6ee 0%,
+#f4eee2 100%
+);
+}
+
+.gradient-spiritual {
+background: linear-gradient(
+135deg,
+#faf6ee 0%,
+#fffdf8 50%,
+#f3f8ec 100%
+);
+}
+
+/* =====================================================
+UTILITIES
+===================================================== */
+
+.text-balance {
+text-wrap: balance;
+}
+
+.text-primary {
+color: #4a3418;
+}
+
+.text-secondary {
+color: #000;
+}
+
+.text-muted {
+color: #8c7a65;
+}
+
+.bg-muted {
+background-color: #f4eee2;
+}
+
+.bg-subtle {
+background-color: #fffdf8;
+}
+
+.border-subtle {
+border-color: var(--border);
+}
+
+/* =====================================================
+SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar {
+width: 8px;
+height: 8px;
+}
+
+::-webkit-scrollbar-track {
+background: #f4eee2;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+background: #d4c3a6;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #bfa886;
+}
+
+/* =====================================================
+SELECTION
+===================================================== */
+
+::selection {
+background-color: #d98e04;
+color: white;
+}
+
+/* =====================================================
+ACCESSIBILITY
+===================================================== */
+
+:focus-visible {
+outline: 2px solid #d98e04;
+outline-offset: 2px;
+border-radius: 0.25rem;
+}
+
+.light-bg {
+  background-color: var(--light-bg);
+}
+
+.text-white {
+  color: #FFF;
+}

@@ -1,0 +1,58 @@
+<!--
+title: Next.js SEO Basics: Getting Started with Metadata
+description: Learn the fundamentals of Next.js SEO including metadata API, title templates, and description optimization for better search rankings.
+date: 2026-06-08
+modified: 2026-06-08
+author: Prasanth Gokuldas
+author_url: https://www.hexosys.com/about
+author_twitter: @prasanthg
+category: SEO
+tags: nextjs, seo, metadata, web-development, optimization
+image: https://images.unsplash.com/photo-1622547748225-9fc4abd5cca0?w=800&h=400&fit=crop
+image_alt: Next.js SEO optimization concept
+image_width: 800
+image_height: 400
+canonical: https://yourblog.com/nextjs-seo-basics
+og_type: article
+og_site_name: MyBlog
+twitter_card: summary_large_image
+twitter_site: @myblog
+twitter_creator: @prasanthg
+reading_time: 3
+word_count: 300
+language: en-US
+robots: index, follow
+-->
+
+<h1>Next.js SEO Basics: Getting Started with Metadata</h1>
+
+<p>Published on June 8, 2026 • 3 min read</p>
+
+<h2>What is Next.js Metadata API?</h2>
+
+<p>The Next.js App Router introduced a powerful Metadata API that makes SEO implementation straightforward. You can define metadata at the page level or layout level.</p>
+
+<h2>Basic Metadata Setup</h2>
+
+<p>Here's a simple example of metadata in your layout.js file:</p>
+
+<pre><code>export const metadata = {
+  title: 'My Blog',
+  description: 'A blog about web development',
+}</code></pre>
+
+<h2>Dynamic Metadata for Pages</h2>
+
+<p>For blog posts, you can generate dynamic metadata based on the content:</p>
+
+<pre><code>export async function generateMetadata({ params }) {
+  const post = await getPost(params.slug)
+  return {
+    title: post.title,
+    description: post.description,
+  }
+}</code></pre>
+
+<h2>Conclusion</h2>
+
+<p>Next.js makes SEO simple with its built-in Metadata API. Start by adding titles and descriptions to your pages, then expand to Open Graph and Twitter cards.</p>
