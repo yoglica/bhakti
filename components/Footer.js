@@ -88,7 +88,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-gradient-to-b light-bg border-t border-gray-200">
+    <footer className="bg-[#f8f6f2] border-t border-[#e8e0d6]">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -108,7 +108,7 @@ export default function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 bg-white text-gray-500 rounded-md flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all duration-300 border border-gray-200 hover:border-orange-500"
+                  className="w-8 h-8 bg-white text-gray-500 rounded-md flex items-center justify-center hover:bg-[#d98e04] hover:text-white transition-all duration-300 border border-[#e8e0d6] hover:border-[#d98e04]"
                   aria-label={social.name}
                 >
                   <SocialIcon name={social.name} />
@@ -127,7 +127,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 hover:text-orange-500 transition-colors text-sm"
+                    className="text-gray-600 hover:text-[#d98e04] transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -146,7 +146,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 hover:text-pink-600 transition-colors text-sm"
+                    className="text-gray-600 hover:text-[#d98e04] transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -167,12 +167,12 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="w-full px-4 py-2 bg-white border border-gray-200 rounded-lg text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-shadow"
+                className="w-full px-4 py-2 bg-white border border-[#e8e0d6] rounded-lg text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#d98e04] focus:border-transparent transition-shadow"
                 required
               />
               <button
                 type="submit"
-                className="w-full px-4 py-2 bg-gray-900 text-white font-medium rounded-lg hover:bg-orange-500 transition-all duration-300 text-sm"
+                className="w-full px-4 py-2 bg-[#d98e04] text-white font-medium rounded-lg hover:bg-[#b87400] transition-all duration-300 text-sm"
               >
                 Subscribe to Newsletter
               </button>
@@ -185,7 +185,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-200 light-bg">
+      <div className="border-t border-[#e8e0d6] bg-[#f8f6f2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-gray-500">
@@ -193,23 +193,23 @@ export default function Footer() {
             </div>
             
             <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <Link href="/privacy" className="text-gray-500 hover:text-orange-500 transition-colors">
+              <Link href="/privacy" className="text-gray-500 hover:text-[#d98e04] transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-500 hover:text-orange-500 transition-colors">
+              <Link href="/terms" className="text-gray-500 hover:text-[#d98e04] transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/sitemap" className="text-gray-500 hover:text-orange-500 transition-colors">
+              <Link href="/sitemap" className="text-gray-500 hover:text-[#d98e04] transition-colors">
                 Sitemap
               </Link>
-              <Link href="/rss" className="text-gray-500 hover:text-orange-500 transition-colors">
+              <Link href="/rss" className="text-gray-500 hover:text-[#d98e04] transition-colors">
                 RSS Feed
               </Link>
             </div>
 
             <button
               onClick={handleBackToTop}
-              className="group bg-white border border-gray-200 hover:bg-gray-900 text-gray-500 hover:text-white p-2 rounded-lg transition-all duration-300"
+              className="group bg-white border border-[#e8e0d6] hover:bg-[#d98e04] text-gray-500 hover:text-white p-2 rounded-lg transition-all duration-300"
               aria-label="Back to top"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -4,196 +4,687 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* =====================================================
-VAISHNAVA / BHAKTI THEME
+VAISHNAVA / BHAKTI THEME - HEALTHLINE STYLE
 ===================================================== */
 
 :root {
-/* Backgrounds */
---background: #ffffff;
---foreground: #3e3023;
---light-bg: #fbf5ed;
+  /* Backgrounds */
+  --background: #ffffff;
+  --foreground: #2d2d2d;
+  --light-bg: #f8f6f2;
 
-/* Brand Colors */
---primary: #d98e04; /* Saffron */
---primary-hover: #b87400;
+  /* Brand Colors */
+  --primary: #d98e04;
+  --primary-hover: #b87400;
 
---secondary: #6b7280;
---accent: #6b8e23; /* Tulsi Green */
+  --secondary: #6b7280;
+  --accent: #6b8e23;
 
-/* Status Colors */
---success: #4f7c3a;
---warning: #c47a00;
---error: #b84a3a;
+  /* Status Colors */
+  --success: #4f7c3a;
+  --warning: #c47a00;
+  --error: #b84a3a;
 
-/* UI */
---border: #e8ddca;
---card-bg: #fffdf8;
+  /* UI */
+  --border: #e8e0d6;
+  --card-bg: #ffffff;
 
---card-shadow:
-0 2px 8px rgba(62, 48, 35, 0.05),
-0 1px 3px rgba(62, 48, 35, 0.03);
-
---hover-shadow:
-0 12px 24px rgba(62, 48, 35, 0.08),
-0 4px 8px rgba(62, 48, 35, 0.04);
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* =====================================================
-BASE
+BASE - Healthline Style
 ===================================================== */
 
 html {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 body {
-background-color: var(--background);
-color: var(--foreground);
-
-font-family:
-Inter,
-"Noto Serif",
-Georgia,
-serif;
-
-line-height: 1.7;
-
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* =====================================================
-TYPOGRAPHY
+TYPOGRAPHY - Healthline Style
 ===================================================== */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-color: #000;
-font-weight: 600;
-letter-spacing: -0.02em;
-line-height: 1.2;
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1a1a1a;
+  margin: 2.5rem 0 1rem 0;
+  letter-spacing: -0.01em;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #1a1a1a;
+  margin: 2rem 0 0.75rem 0;
+}
+
+h4 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #1a1a1a;
+  margin: 1.5rem 0 0.5rem 0;
 }
 
 p {
-color: #000;
-line-height: 1.8;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: #2d2d2d;
+  margin: 0 0 1.25rem 0;
+  max-width: 100%;
 }
 
 strong {
-color: #000;
+  font-weight: 600;
+  color: #1a1a1a;
 }
 
+/* Links */
 a {
-color: var(--primary);
-text-decoration: none;
-transition: color 0.2s ease;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.15s ease;
 }
 
-a:hover {
-color: var(--primary-hover);
+/* Lists - Healthline Style */
+ul,
+ol {
+  margin: 0 0 1.25rem 0;
+  padding-left: 1.75rem;
+  color: #2d2d2d;
+  line-height: 1.8;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  font-size: 1.0625rem;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquotes - Healthline Style */
+blockquote {
+  background: #f8f6f2;
+  border-left: 4px solid var(--primary);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: #2d2d2d;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+blockquote p {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+blockquote footer {
+  margin-top: 0.75rem;
+  font-weight: 500;
+  color: #6b5a48;
+  font-size: 0.95rem;
+  font-style: normal;
+}
+
+blockquote footer::before {
+  content: "— ";
+}
+
+/* Code */
+pre {
+  background: #1e1e1e;
+  color: #e8e8e8;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+code {
+  background: #f0ece6;
+  color: #2d2d2d;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.9em;
+}
+
+pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* Tables - Healthline Style */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+thead {
+  background: #f0ece6;
+}
+
+th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #1a1a1a;
+  border-bottom: 2px solid #d4c9b8;
+}
+
+td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background: #faf8f5;
+}
+
+/* =====================================================
+BLOG POST CONTENT - Healthline Style
+===================================================== */
+
+/* Main article wrapper */
+.article-content {
+  max-width: 100%;
+}
+
+.article-content p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.article-content h2 {
+  font-size: 1.875rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.article-content h3 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-content h4 {
+  font-size: 1.25rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.article-content ul,
+.article-content ol {
+  margin-bottom: 1.5rem;
+}
+
+.article-content li {
+  font-size: 1.125rem;
+}
+
+/* =====================================================
+POST META - Healthline Style
+===================================================== */
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  padding: 0.75rem 0 1rem 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: #6b5a48;
+}
+
+.post-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.post-meta a {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.post-meta a:hover {
+  text-decoration: underline;
+}
+
+/* =====================================================
+POST AUTHOR - Healthline Style
+===================================================== */
+
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.author-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d98e04, #b87400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1a1a1a;
+}
+
+.author-name a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.author-name a:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.author-title {
+  font-size: 0.85rem;
+  color: #6b5a48;
+}
+
+.author-title a {
+  color: #6b5a48;
+  text-decoration: none;
+}
+
+.author-title a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* =====================================================
+POST EXCERPT / INTRODUCTION - Healthline Style
+===================================================== */
+
+.post-intro {
+  background: #f8f6f2;
+  padding: 1.75rem 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2.25rem;
+  border-left: 4px solid var(--primary);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #1a1a1a;
+}
+
+.post-intro p {
+  margin-bottom: 0;
+  font-size: 1.15rem;
+}
+
+/* =====================================================
+POST TAGS - Healthline Style
+===================================================== */
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+  margin-top: 2.5rem;
+  border-top: 2px solid var(--border);
+}
+
+.post-tags-label {
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-right: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.post-tags a {
+  background: #f0ece6;
+  color: #3e3023;
+  padding: 0.25rem 0.9rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.post-tags a:hover {
+  background: var(--primary);
+  color: #ffffff;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+/* =====================================================
+TABLE OF CONTENTS - Healthline Style
+===================================================== */
+
+.table-of-contents {
+  background: #faf8f5;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.table-of-contents h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0;
+  border-bottom: none;
+  color: #1a1a1a;
+}
+
+.table-of-contents ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.table-of-contents li {
+  padding: 0.3rem 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(232, 224, 214, 0.4);
+  font-size: 0.95rem;
+}
+
+.table-of-contents li:last-child {
+  border-bottom: none;
+}
+
+.table-of-contents a {
+  color: #2d2d2d;
+  text-decoration: none;
+  display: block;
+  padding: 0.15rem 0;
+  transition: all 0.2s ease;
+  font-weight: 400;
+}
+
+.table-of-contents a:hover {
+  color: var(--primary);
+  padding-left: 0.5rem;
+  text-decoration: none;
 }
 
 /* =====================================================
 LAYOUT
 ===================================================== */
 
-.container-custom {
-max-width: 80rem;
-margin-left: auto;
-margin-right: auto;
-padding-left: 1rem;
-padding-right: 1rem;
+.container-blog {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Two-column blog layout */
+.blog-layout {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 3rem;
+  margin-top: 1.5rem;
+}
+
+.blog-main {
+  min-width: 0;
+}
+
+.blog-sidebar {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
 }
 
 /* =====================================================
-CARDS
+RESPONSIVE - Healthline Style
+===================================================== */
+
+@media (max-width: 1024px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .blog-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.05rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .article-content p {
+    font-size: 1rem;
+  }
+
+  .article-content li {
+    font-size: 1rem;
+  }
+
+  .container-blog {
+    padding: 0 1rem;
+  }
+
+  .post-intro {
+    padding: 1.25rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  .post-intro p {
+    font-size: 1rem;
+  }
+
+  .table-of-contents {
+    padding: 1rem 1.25rem;
+  }
+
+  .post-meta {
+    gap: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  blockquote {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  blockquote p {
+    font-size: 1rem;
+  }
+
+  pre {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  .post-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .post-author {
+    flex-wrap: wrap;
+  }
+}
+
+/* =====================================================
+CARDS - Healthline Style
 ===================================================== */
 
 .card {
-background-color: var(--card-bg);
-border: 1px solid var(--border);
-border-radius: 1rem;
-box-shadow: var(--card-shadow);
-
-transition:
-box-shadow 0.25s ease,
-transform 0.25s ease;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .card:hover {
-box-shadow: var(--hover-shadow);
-transform: translateY(-2px);
+  box-shadow: var(--hover-shadow);
+  transform: translateY(-2px);
 }
 
 /* =====================================================
-BUTTONS
+BUTTONS - Healthline Style
 ===================================================== */
 
 .btn-primary {
-background-color: var(--primary);
-color: #ffffff;
-
-padding: 0.75rem 1.5rem;
-border-radius: 0.75rem;
-
-font-weight: 500;
-
-transition: all 0.2s ease;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 0.7rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .btn-primary:hover {
-background-color: var(--primary-hover);
+  background: var(--primary-hover);
+  color: #ffffff;
+  transform: translateY(-1px);
+  text-decoration: none;
 }
 
 .btn-secondary {
-background-color: #f4eee2;
-color: #000;
-
-border: 1px solid var(--border);
-
-padding: 0.75rem 1.5rem;
-border-radius: 0.75rem;
-
-font-weight: 500;
-
-transition: all 0.2s ease;
+  background: #f0ece6;
+  color: #1a1a1a;
+  padding: 0.7rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .btn-secondary:hover {
-background-color: #ece3d3;
-}
-
-/* =====================================================
-GRADIENTS
-===================================================== */
-
-.gradient-primary {
-background: linear-gradient(
-135deg,
-#d98e04 0%,
-#b87400 100%
-);
-}
-
-.gradient-soft {
-background: linear-gradient(
-135deg,
-#faf6ee 0%,
-#f4eee2 100%
-);
-}
-
-.gradient-spiritual {
-background: linear-gradient(
-135deg,
-#faf6ee 0%,
-#fffdf8 50%,
-#f3f8ec 100%
-);
+  background: #e6e0d8;
+  transform: translateY(-1px);
+  text-decoration: none;
 }
 
 /* =====================================================
@@ -201,31 +692,23 @@ UTILITIES
 ===================================================== */
 
 .text-balance {
-text-wrap: balance;
+  text-wrap: balance;
 }
 
 .text-primary {
-color: #4a3418;
-}
-
-.text-secondary {
-color: #000;
+  color: #4a3418;
 }
 
 .text-muted {
-color: #8c7a65;
+  color: #8c7a65;
 }
 
 .bg-muted {
-background-color: #f4eee2;
-}
-
-.bg-subtle {
-background-color: #fffdf8;
+  background-color: #f4eee2;
 }
 
 .border-subtle {
-border-color: var(--border);
+  border-color: var(--border);
 }
 
 /* =====================================================
@@ -233,22 +716,22 @@ SCROLLBAR
 ===================================================== */
 
 ::-webkit-scrollbar {
-width: 8px;
-height: 8px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-background: #f4eee2;
-border-radius: 10px;
+  background: #f0ece6;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-background: #d4c3a6;
-border-radius: 10px;
+  background: #d4c9b8;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-background: #bfa886;
+  background: #bfb0a0;
 }
 
 /* =====================================================
@@ -256,8 +739,8 @@ SELECTION
 ===================================================== */
 
 ::selection {
-background-color: #d98e04;
-color: white;
+  background: #d98e04;
+  color: #ffffff;
 }
 
 /* =====================================================
@@ -265,15 +748,54 @@ ACCESSIBILITY
 ===================================================== */
 
 :focus-visible {
-outline: 2px solid #d98e04;
-outline-offset: 2px;
-border-radius: 0.25rem;
+  outline: 2px solid #d98e04;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
 }
 
-.light-bg {
-  background-color: var(--light-bg);
+/* Add this to your globals.css - Container fix */
+
+.container-blog {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
 }
 
-.text-white {
-  color: #FFF;
+/* Blog Layout - Two Column */
+.blog-layout {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 3rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.blog-main {
+  min-width: 0;
+  width: 100%;
+}
+
+.blog-sidebar {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .blog-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-blog {
+    padding: 0 1rem;
+  }
 }
