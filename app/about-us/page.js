@@ -2,7 +2,6 @@
 
 import { getPageBySlug } from '@/lib/posts'
 import { notFound } from 'next/navigation'
-import Image from 'next/image'
 
 export const dynamic = 'auto'
 export const revalidate = 3600
@@ -27,7 +26,7 @@ export async function generateMetadata() {
     openGraph: {
       title: page.title,
       description: page.description,
-      type: 'website',
+      type: page.ogType || 'website',
       images: page.imageUrl ? [
         {
           url: page.imageUrl,
