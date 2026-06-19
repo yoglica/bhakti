@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+@theme {
+  --color-gold-50: #fdf8f0;
+  --color-gold-100: #fbe8d0;
+  --color-gold-200: #f7d1a0;
+  --color-gold-300: #f3ba70;
+  --color-gold-400: #efa340;
+  --color-gold-500: #d98e04;
+  --color-gold-600: #b87400;
+  --color-gold-700: #975f00;
+  --color-gold-800: #764a00;
+  --color-gold-900: #553500;
+  
+  --color-spiritual-cream: #f8f6f2;
+  --color-spiritual-beige: #f0ebe4;
+  --color-spiritual-border: #e8e0d6;
+}
+
 /* Force light mode only */
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -137,10 +154,31 @@ ol ul {
   margin-bottom: 0.5rem;
 }
 
+/* Add to your global CSS */
+.related-article-title {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+}
+
+.related-article-title:hover {
+  color: #2563eb !important;
+}
+
+.related-article-meta {
+  font-size: 14px !important;
+  color: #6b7280 !important;
+}
+
+.related-article-header {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  margin-bottom: 16px !important;
+}
 /* Blockquotes - Healthline Style */
 blockquote {
   background: #f8f6f2;
-  border-left: 4px solid var(--primary);
   padding: 1.5rem 2rem;
   margin: 2rem 0;
   border-radius: 0 0.5rem 0.5rem 0;
@@ -785,7 +823,7 @@ ACCESSIBILITY
 /* Quote Card Styles */
 .quote-card {
   background: linear-gradient(145deg, #fbf5ed, #f8f6f2);
-  border-left: 6px solid #d98e04;
+
   border-radius: 0 1rem 1rem 0;
   padding: 1.5rem 2rem;
   margin: 1.5rem 0;

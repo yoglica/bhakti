@@ -65,130 +65,174 @@ export default function Header() {
     }
   }, [pathname])
 
-  // Mega Dropdown Data
+  // Organized by categories matching your existing pages
   const megaMenus = {
-    teachings: {
-      title: "Divine Teachings",
+    scriptures: {
+      title: "Sacred Scriptures",
+      icon: "📜",
+      columns: [
+        {
+          title: "Bhagavad Gita",
+          links: [
+            { name: "Leaving Family to Become Sanyasi", href: "/bhagavad-gita/leaving-family-to-become-a-sanyasi" },
+            { name: "Purpose of Life", href: "/bhagavad-gita/purpose-of-life-Bhagavad-Gita" },
+            { name: "Top 7 Gita Quotes on Success", href: "/top-7-bhagavad-gita-quotes-on-success" },
+            { name: "Top 15 Inspirational Gita Quotes", href: "/top-15-bhagavad-gita-inspirational-quotes" },
+          ]
+        },
+        {
+          title: "Vedic Wisdom",
+          links: [
+            { name: "Hinduism", href: "/religion/hindu" },
+            { name: "Buddhism", href: "/religion/buddism" },
+            { name: "Om - The Sacred Sound", href: "/religious-beliefs/om" },
+            { name: "Non-Attachment", href: "/religious-beliefs/non-attachment" },
+          ]
+        },
+        {
+          title: "Spiritual Practices",
+          links: [
+            { name: "Patanjali Ashtanga Yoga", href: "/religion-and-spirituality/patanjali-ashtanga-yoga-step" },
+            { name: "How to Get Spiritual", href: "/religion-and-spirituality/how-to-get-spiritual" },
+            { name: "Vegetarian Diet", href: "/religion-and-spirituality/vegetarian-diet" },
+            { name: "Ekadasi Fasting", href: "/religion-and-spirituality/ekadasi-fasting" },
+          ]
+        },
+      ]
+    },
+    divine_personalities: {
+      title: "Divine Personalities",
       icon: "🕉️",
       columns: [
         {
-          title: "Scriptures",
+          title: "Lord Krishna",
           links: [
-            { name: "Bhagavad Gita", href: "/teachings/bhagavad-gita", description: "The Song of God" },
-            { name: "Radha Sudha Nidhi", href: "/teachings/radha-sudha-nidhi", description: "Divine nectar" },
-            { name: "Vedas & Upanishads", href: "/teachings/vedas", description: "Ancient wisdom" },
-            { name: "Bhagavata Purana", href: "/teachings/bhagavata-purana", description: "Stories of Krishna" },
+            { name: "Krishna - Purna Avatar", href: "/krishna/krishna-purna-avatar" },
+            { name: "Krishna Life Lessons", href: "/krishna/krishna-life-lessons" },
+            { name: "Nidhivan Mystery", href: "/krishna/nidhivan-in-vrindavan-mystery" },
+            { name: "Krishna's Heart in Puri", href: "/travel-destination/krishna-heart-alive-in-puri-jagannath-temple-miracle" },
           ]
         },
         {
-          title: "Spiritual Paths",
+          title: "Lord Shiva",
           links: [
-            { name: "Bhakti Yoga", href: "/teachings/bhakti-yoga", description: "Path of devotion" },
-            { name: "Karma Yoga", href: "/teachings/karma-yoga", description: "Path of action" },
-            { name: "Jnana Yoga", href: "/teachings/jnana-yoga", description: "Path of knowledge" },
-            { name: "Dhyana Yoga", href: "/teachings/dhyana-yoga", description: "Path of meditation" },
+            { name: "Shiva Facts", href: "/shiva/shiva-facts" },
+            { name: "10 Things from Shiva Purana", href: "/shiva/10-things-of-shiva-purana-useful-in-life" },
+            { name: "Kailash Mountain Mystery", href: "/shiva/kailash-mountain-mystery" },
+            { name: "Jyotirlinga of India", href: "/shiva/jyotirlinga-of-india" },
           ]
         },
         {
-          title: "Sacred Texts",
+          title: "Radha & Other Deities",
           links: [
-            { name: "Ramayana", href: "/teachings/ramayana", description: "Lord Rama's story" },
-            { name: "Mahabharata", href: "/teachings/mahabharata", description: "Epic of India" },
-            { name: "Chaitanya Charitamrita", href: "/teachings/chaitanya", description: "Lord Chaitanya's life" },
-            { name: "Premand Ji's Discourses", href: "/teachings/premand-ji", description: "Modern wisdom" },
-          ]
-        },
-        {
-          title: "Daily Wisdom",
-          links: [
-            { name: "Quote of the Day", href: "/teachings/quote-of-day", description: "Daily inspiration" },
-            { name: "Verse of the Day", href: "/teachings/verse-of-day", description: "Scriptural insights" },
-            { name: "Saint Stories", href: "/teachings/saint-stories", description: "Inspiring lives" },
-            { name: "Q&A with Saints", href: "/teachings/qa-saints", description: "Spiritual guidance" },
+            { name: "Radha Ashtami", href: "/radha/radha-ashtami" },
+            { name: "Sree Ram Janmabhoomi", href: "/travel-destination/sree-ram-janmabhoomi-mandir-ayodhya" },
           ]
         },
       ]
     },
-    satsangs: {
-      title: "Satsangs & Events",
-      icon: "🕯️",
+    gurus_saints: {
+      title: "Gurus & Saints",
+      icon: "🙏",
       columns: [
         {
-          title: "Upcoming Satsangs",
+          title: "Premand Ji Maharaj",
           links: [
-            { name: "Virtual Satsang", href: "/satsangs/virtual", description: "Online gatherings" },
-            { name: "In-Person Satsang", href: "/satsangs/in-person", description: "Ashram events" },
-            { name: "Youth Programs", href: "/satsangs/youth", description: "For young devotees" },
-            { name: "Women's Satsang", href: "/satsangs/women", description: "Ladies gatherings" },
+            { name: "Divine Discourses", href: "/premand-ji/discourses" },
+            { name: "Spiritual Teachings", href: "/premand-ji/teachings" },
+            { name: "Life & Mission", href: "/premand-ji/biography" },
+            { name: "Satsang Schedule", href: "/premand-ji/satsangs" },
           ]
         },
         {
-          title: "Festivals",
+          title: "Sai Baba",
           links: [
-            { name: "Janmashtami", href: "/festivals/janmashtami", description: "Krishna's birth" },
-            { name: "Radha Ashtami", href: "/festivals/radha-ashtami", description: "Radha's appearance" },
-            { name: "Gita Jayanti", href: "/festivals/gita-jayanti", description: "Gita's birthday" },
-            { name: "Holy Days Calendar", href: "/festivals/calendar", description: "All festivals" },
+            { name: "Sai Baba Quotes", href: "/quotes/sai-baba-quotes" },
+            { name: "Sathya Sai Baba Quotes", href: "/sathya-sai-baba-quotes-in-English" },
+            { name: "Sai Baba Miracle Stories", href: "/guru/sai-baba-miracle-stories" },
           ]
         },
         {
-          title: "Retreats",
+          title: "Other Enlightened Masters",
           links: [
-            { name: "Weekend Retreats", href: "/retreats/weekend", description: "Short getaways" },
-            { name: "7-Day Silent Retreat", href: "/retreats/silent", description: "Deep meditation" },
-            { name: "Family Retreat", href: "/retreats/family", description: "For all ages" },
-            { name: "Seva Retreat", href: "/retreats/seva", description: "Service-based" },
-          ]
-        },
-        {
-          title: "Live Streams",
-          links: [
-            { name: "Morning Aarti", href: "/live/morning-aarti", description: "Daily 6 AM" },
-            { name: "Evening Satsang", href: "/live/evening-satsang", description: "Daily 7 PM" },
-            { name: "Special Events", href: "/live/special", description: "Live broadcasts" },
-            { name: "Recorded Satsangs", href: "/live/recorded", description: "Watch anytime" },
+            { name: "Ramana Maharshi", href: "/guru/biography-of-ramana-maharshi" },
+            { name: "Mahavatar Babaji", href: "/guru/mahavatar-babaji" },
+            { name: "Vivekananda Quotes", href: "/success-vivekananda-quotes-life" },
+            { name: "Osho Quotes on Life", href: "/top-15-osho-inspirational-quotes-on-life" },
+            { name: "Osho on Life & Death", href: "/top-15-osho-inspirational-quotes-on-life-and-death" },
           ]
         },
       ]
     },
-    resources: {
-      title: "Resources",
-      icon: "📿",
+    spirituality: {
+      title: "Spirituality & Yoga",
+      icon: "🧘",
       columns: [
         {
-          title: "Spiritual Tools",
+          title: "Meditation & Yoga",
           links: [
-            { name: "Meditation Timer", href: "/tools/meditation-timer", description: "Guided sessions" },
-            { name: "Mantra Player", href: "/tools/mantra-player", description: "Chant along" },
-            { name: "Temple Locator", href: "/tools/temple-locator", description: "Find nearby temple" },
-            { name: "Festival Calendar", href: "/tools/festival-calendar", description: "Plan celebrations" },
+            { name: "Benefits of Meditation", href: "/yoga-and-meditation/benefits-of-meditation" },
+            { name: "How to Practice Japa", href: "/yoga-and-meditation/how-to-practice-mantra-japa-meditation" },
+            { name: "Kundalini Awakening", href: "/yoga-and-meditation/how-to-awaken-kundalini-chakra" },
+            { name: "Karma Yoga", href: "/yoga-and-meditation/karma-yoga" },
+            { name: "Pranayama", href: "/yoga-and-meditation/prayanama" },
           ]
         },
         {
-          title: "Community",
+          title: "Spiritual Living",
           links: [
-            { name: "Discussion Forum", href: "/community/forum", description: "Ask questions" },
-            { name: "Devotee Stories", href: "/community/stories", description: "Share experiences" },
-            { name: "Volunteer Opportunities", href: "/community/volunteer", description: "Seva projects" },
-            { name: "Study Groups", href: "/community/study-groups", description: "Join online" },
+            { name: "Brahma Muhurta Benefits", href: "/spirituality/brahma-muhurta-time-benefits" },
+            { name: "Spiritual Awakening", href: "/spirituality/spiritual-awakening-practices" },
+            { name: "Reduce Stress Spiritually", href: "/spirituality/spiritual-steps-to-reduce-stress" },
+            { name: "Salvation (Moksha)", href: "/spirituality/what-is-salvation-or-moksha" },
+            { name: "Celibacy", href: "/celibacy/celibacy" },
           ]
         },
         {
-          title: "Media",
+          title: "Holy Places",
           links: [
-            { name: "Video Gallery", href: "/media/videos", description: "Satsang videos" },
-            { name: "Audio Podcast", href: "/media/podcast", description: "Listen on the go" },
-            { name: "Photo Gallery", href: "/media/photos", description: "Ashram moments" },
-            { name: "E-books", href: "/media/ebooks", description: "Free downloads" },
+            { name: "Kedarnath Yatra", href: "/travel-destination/kedarnath-yatra" },
+            { name: "Rameshwaram Temple", href: "/travel-destination/rameshwaram-jyotirlinga-temple" },
+            { name: "Rishikesh Yatra", href: "/travel-destination/rishikesh-yatra" },
+            { name: "Ujjain Darshan", href: "/travel-destination/ujjain-darshan-tourism" },
+            { name: "Varanasi Yatra", href: "/travel-destination/varanasi-yatra" },
+            { name: "Shani Shingnapur", href: "/travel-destination/shani-shingnapur-yatra" },
           ]
         },
         {
-          title: "Support",
+          title: "Other Religions",
           links: [
-            { name: "Donate for Seva", href: "/support/donate", description: "Support mission" },
-            { name: "Sponsor a Child", href: "/support/sponsor", description: "Education support" },
-            { name: "Volunteer", href: "/support/volunteer", description: "Join our team" },
-            { name: "Prayer Requests", href: "/support/prayers", description: "Submit requests" },
+            { name: "Amazing Bible Facts", href: "/religious-beliefs/amazing-bible-facts-statistics" },
+            { name: "Mystery of Jesus Christ", href: "/religious-beliefs/mystery-of-jesus-christ" },
+            { name: "Gautam Buddha Purnima", href: "/religious-beliefs/gautam-buddha-purnima-vesak" },
+            { name: "Types of People Considered Dead", href: "/religious-beliefs/types-of-people-who-are-considered-dead" },
+          ]
+        },
+      ]
+    },
+    numerology: {
+      title: "Numerology",
+      icon: "🔢",
+      columns: [
+        {
+          title: "Life Path Numbers",
+          links: [
+            { name: "Life Path 1", href: "/numerology/life-path-number-1-meaning-numerology" },
+            { name: "Life Path 2", href: "/numerology/life-path-number-2-meaning-numerology" },
+            { name: "Life Path 3", href: "/numerology/life-path-number-3-meaning-numerology" },
+            { name: "Life Path 4", href: "/numerology/life-path-number-4-meaning-numerology" },
+            { name: "Life Path 5", href: "/numerology/life-path-number-5-meaning-numerology" },
+            { name: "Life Path 6", href: "/numerology/life-path-number-6-meaning-numerology" },
+            { name: "Life Path 7", href: "/numerology/life-path-number-7-meaning-numerology" },
+            { name: "Life Path 8", href: "/numerology/life-path-number-8-meaning-numerology" },
+            { name: "Life Path 9", href: "/numerology/life-path-number-9-meaning-numerology" },
+          ]
+        },
+        {
+          title: "Vedic Astrology",
+          links: [
+            { name: "Learn Numerology", href: "/numerology/learn-numerology" },
+            { name: "Sacred Numbers", href: "/numerology/sacred-numbers" },
           ]
         },
       ]
@@ -210,17 +254,19 @@ export default function Header() {
           : 'bg-white shadow-sm'
       }`}
     >
-      {/* Top Announcement Bar */}
-      <div className="hidden lg:block bg-[#f8f6f2] border-b border-[#e8e0d6] text-xs py-1.5">
+      {/* Top Announcement Bar - Featuring Premand Ji Maharaj */}
+      <div className="hidden lg:block bg-gradient-to-r from-[#f8f6f2] to-[#f0ebe4] border-b border-[#e8e0d6] text-xs py-1.5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center items-center gap-4 text-gray-500">
-            <span>🌸 Radhe Radhe</span>
+          <div className="flex justify-center items-center gap-4 text-gray-600">
+            <span className="text-[#d98e04] font-medium">🌟 Premand Ji Maharaj</span>
             <span>•</span>
             <span>🙏 Jai Shri Krishna</span>
             <span>•</span>
-            <span>🕉️ Premand Ji Maharaj Ki Jai</span>
+            <span>🕉️ Divine Discourses</span>
             <span>•</span>
-            <span>📿 Upcoming Satsang: June 15, 2026</span>
+            <span>📿 Next Satsang: June 15, 2026</span>
+            <span>•</span>
+            <span className="text-[#d98e04]">🌸 Radhe Radhe</span>
           </div>
         </div>
       </div>
@@ -229,23 +275,27 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           
-          {/* Logo */}
+          {/* Logo - Centered around Premand Ji */}
           <div className="flex-shrink-0">
-            <Link href="/" onClick={handleNavigation} className="flex items-center gap-2">
-              <div className="text-2xl font-bold bg-gradient-to-r from-[#d98e04] to-[#b87400] bg-clip-text text-transparent">
-                Premand Ji
+            <Link href="/" onClick={handleNavigation} className="flex items-center gap-3">
+              <div>
+                <div className="text-xl font-bold bg-gradient-to-r from-[#d98e04] to-[#b87400] bg-clip-text text-transparent">
+                  Premand Ji Maharaj
+                </div>
+                <div className="text-[10px] text-gray-400 tracking-wider hidden sm:block">
+                  Divine Blessings • Spiritual Wisdom
+                </div>
               </div>
-              <span className="hidden lg:inline text-xs text-gray-400">Divine Blessings</span>
             </Link>
           </div>
 
           {/* Desktop Navigation with Mega Dropdowns */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-5">
             {/* Home Link */}
             <Link
               href="/"
               onClick={handleNavigation}
-              className={`relative text-gray-700 hover:text-[#d98e04] transition-colors font-medium group ${
+              className={`relative text-gray-700 hover:text-[#d98e04] transition-colors font-medium group text-sm ${
                 pathname === '/' ? 'text-[#d98e04]' : ''
               }`}
             >
@@ -255,35 +305,35 @@ export default function Header() {
               }`} />
             </Link>
 
-            {/* Teachings Mega Dropdown */}
+            {/* Scriptures Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => handleDropdownEnter('teachings')}
+              onMouseEnter={() => handleDropdownEnter('scriptures')}
               onMouseLeave={handleDropdownLeave}
             >
               <button
-                className={`relative text-gray-700 hover:text-[#d98e04] transition-colors font-medium group flex items-center gap-1 ${
-                  pathname?.startsWith('/teachings') ? 'text-[#d98e04]' : ''
+                className={`relative text-gray-700 hover:text-[#d98e04] transition-colors font-medium group flex items-center gap-1 text-sm ${
+                  pathname?.startsWith('/bhagavad-gita') || pathname?.startsWith('/religion') ? 'text-[#d98e04]' : ''
                 }`}
               >
-                Teachings
+                Scriptures
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
                 <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-[#d98e04] transform origin-left transition-transform duration-300 ${
-                  pathname?.startsWith('/teachings') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  pathname?.startsWith('/bhagavad-gita') || pathname?.startsWith('/religion') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                 }`} />
               </button>
 
-              {activeDropdown === 'teachings' && (
-                <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-screen max-w-5xl bg-white rounded-xl shadow-xl border border-[#e8e0d6] overflow-visible z-50">
+              {activeDropdown === 'scriptures' && (
+                <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-screen max-w-4xl bg-white rounded-xl shadow-xl border border-[#e8e0d6] overflow-visible z-50">
                   <div className="p-6 max-h-[80vh] overflow-y-auto">
                     <div className="flex items-center gap-2 mb-4 pb-3 border-b border-[#e8e0d6] sticky top-0 bg-white">
-                      <span className="text-2xl">{megaMenus.teachings.icon}</span>
-                      <h3 className="text-lg font-bold text-gray-800">{megaMenus.teachings.title}</h3>
+                      <span className="text-2xl">{megaMenus.scriptures.icon}</span>
+                      <h3 className="text-lg font-bold text-gray-800">{megaMenus.scriptures.title}</h3>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                      {megaMenus.teachings.columns.map((column, idx) => (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {megaMenus.scriptures.columns.map((column, idx) => (
                         <div key={idx}>
                           <h4 className="font-semibold text-gray-800 mb-3 text-sm">{column.title}</h4>
                           <ul className="space-y-2">
@@ -297,9 +347,6 @@ export default function Header() {
                                   <div className="text-sm font-medium text-gray-700 group-hover:text-[#d98e04] transition">
                                     {link.name}
                                   </div>
-                                  <div className="text-xs text-gray-400 group-hover:text-gray-500">
-                                    {link.description}
-                                  </div>
                                 </Link>
                               </li>
                             ))}
@@ -308,44 +355,39 @@ export default function Header() {
                       ))}
                     </div>
                   </div>
-                  <div className="bg-[#f8f6f2] px-6 py-3 border-t border-[#e8e0d6]">
-                    <Link href="/teachings/all" onClick={handleNavigation} className="text-sm text-[#d98e04] hover:underline flex items-center gap-1">
-                      View all teachings →
-                    </Link>
-                  </div>
                 </div>
               )}
             </div>
 
-            {/* Satsangs Mega Dropdown */}
+            {/* Divine Personalities Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => handleDropdownEnter('satsangs')}
+              onMouseEnter={() => handleDropdownEnter('divine_personalities')}
               onMouseLeave={handleDropdownLeave}
             >
               <button
-                className={`relative text-gray-700 hover:text-[#d98e04] transition-colors font-medium group flex items-center gap-1 ${
-                  pathname?.startsWith('/satsangs') ? 'text-[#d98e04]' : ''
+                className={`relative text-gray-700 hover:text-[#d98e04] transition-colors font-medium group flex items-center gap-1 text-sm ${
+                  pathname?.startsWith('/krishna') || pathname?.startsWith('/shiva') || pathname?.startsWith('/radha') ? 'text-[#d98e04]' : ''
                 }`}
               >
-                Satsangs
+                Divine Personalities
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
                 <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-[#d98e04] transform origin-left transition-transform duration-300 ${
-                  pathname?.startsWith('/satsangs') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  pathname?.startsWith('/krishna') || pathname?.startsWith('/shiva') || pathname?.startsWith('/radha') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                 }`} />
               </button>
 
-              {activeDropdown === 'satsangs' && (
-                <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-screen max-w-5xl bg-white rounded-xl shadow-xl border border-[#e8e0d6] overflow-visible z-50">
+              {activeDropdown === 'divine_personalities' && (
+                <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-screen max-w-4xl bg-white rounded-xl shadow-xl border border-[#e8e0d6] overflow-visible z-50">
                   <div className="p-6 max-h-[80vh] overflow-y-auto">
                     <div className="flex items-center gap-2 mb-4 pb-3 border-b border-[#e8e0d6] sticky top-0 bg-white">
-                      <span className="text-2xl">{megaMenus.satsangs.icon}</span>
-                      <h3 className="text-lg font-bold text-gray-800">{megaMenus.satsangs.title}</h3>
+                      <span className="text-2xl">{megaMenus.divine_personalities.icon}</span>
+                      <h3 className="text-lg font-bold text-gray-800">{megaMenus.divine_personalities.title}</h3>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                      {megaMenus.satsangs.columns.map((column, idx) => (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {megaMenus.divine_personalities.columns.map((column, idx) => (
                         <div key={idx}>
                           <h4 className="font-semibold text-gray-800 mb-3 text-sm">{column.title}</h4>
                           <ul className="space-y-2">
@@ -359,8 +401,72 @@ export default function Header() {
                                   <div className="text-sm font-medium text-gray-700 group-hover:text-[#d98e04] transition">
                                     {link.name}
                                   </div>
-                                  <div className="text-xs text-gray-400 group-hover:text-gray-500">
-                                    {link.description}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Gurus & Saints Dropdown - Premiering Premand Ji */}
+            <div 
+              className="relative"
+              onMouseEnter={() => handleDropdownEnter('gurus_saints')}
+              onMouseLeave={handleDropdownLeave}
+            >
+              <button
+                className={`relative text-[#d98e04] font-semibold group flex items-center gap-1 text-sm ${
+                  pathname?.startsWith('/premand-ji') || pathname?.startsWith('/guru') || pathname?.startsWith('/quotes') ? 'text-[#d98e04]' : ''
+                }`}
+              >
+                Gurus & Saints
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+                <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-[#d98e04] transform origin-left transition-transform duration-300 ${
+                  pathname?.startsWith('/premand-ji') || pathname?.startsWith('/guru') || pathname?.startsWith('/quotes') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                }`} />
+              </button>
+
+              {activeDropdown === 'gurus_saints' && (
+                <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-screen max-w-5xl bg-white rounded-xl shadow-xl border border-[#e8e0d6] overflow-visible z-50">
+                  <div className="p-6 max-h-[80vh] overflow-y-auto">
+                    <div className="flex items-center gap-2 mb-4 pb-3 border-b border-[#e8e0d6] sticky top-0 bg-white">
+                      <span className="text-2xl">{megaMenus.gurus_saints.icon}</span>
+                      <h3 className="text-lg font-bold text-gray-800">{megaMenus.gurus_saints.title}</h3>
+                      <span className="ml-auto text-[#d98e04] text-xs font-medium bg-[#f8f6f2] px-3 py-1 rounded-full">🌟 Premand Ji Maharaj</span>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {megaMenus.gurus_saints.columns.map((column, idx) => (
+                        <div key={idx}>
+                          <h4 className={`font-semibold mb-3 text-sm ${column.title === "Premand Ji Maharaj" ? 'text-[#d98e04]' : 'text-gray-800'}`}>
+                            {column.title}
+                            {column.title === "Premand Ji Maharaj" && (
+                              <span className="ml-1 text-xs">🌟</span>
+                            )}
+                          </h4>
+                          <ul className="space-y-2">
+                            {column.links.map((link, linkIdx) => (
+                              <li key={linkIdx}>
+                                <Link
+                                  href={link.href}
+                                  className="block group"
+                                  onClick={handleNavigation}
+                                >
+                                  <div className={`text-sm font-medium transition ${
+                                    link.href.includes('/premand-ji') 
+                                      ? 'text-[#d98e04] group-hover:text-[#b87400]' 
+                                      : 'text-gray-700 group-hover:text-[#d98e04]'
+                                  }`}>
+                                    {link.name}
+                                    {link.href.includes('/premand-ji') && (
+                                      <span className="ml-1 text-[10px] text-[#d98e04]">• Featured</span>
+                                    )}
                                   </div>
                                 </Link>
                               </li>
@@ -370,44 +476,44 @@ export default function Header() {
                       ))}
                     </div>
                   </div>
-                  <div className="bg-[#f8f6f2] px-6 py-3 border-t border-[#e8e0d6]">
-                    <Link href="/satsangs/all" onClick={handleNavigation} className="text-sm text-[#d98e04] hover:underline flex items-center gap-1">
-                      View all satsangs →
+                  <div className="bg-gradient-to-r from-[#f8f6f2] to-[#f0ebe4] px-6 py-3 border-t border-[#e8e0d6]">
+                    <Link href="/premand-ji" onClick={handleNavigation} className="text-sm text-[#d98e04] hover:underline flex items-center gap-1 font-medium">
+                      🙏 Explore Premand Ji Maharaj's Divine Teachings →
                     </Link>
                   </div>
                 </div>
               )}
             </div>
 
-            {/* Resources Mega Dropdown */}
+            {/* Spirituality Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => handleDropdownEnter('resources')}
+              onMouseEnter={() => handleDropdownEnter('spirituality')}
               onMouseLeave={handleDropdownLeave}
             >
               <button
-                className={`relative text-gray-700 hover:text-[#d98e04] transition-colors font-medium group flex items-center gap-1 ${
-                  pathname?.startsWith('/resources') ? 'text-[#d98e04]' : ''
+                className={`relative text-gray-700 hover:text-[#d98e04] transition-colors font-medium group flex items-center gap-1 text-sm ${
+                  pathname?.startsWith('/spirituality') || pathname?.startsWith('/yoga-and-meditation') || pathname?.startsWith('/travel-destination') || pathname?.startsWith('/religious-beliefs') ? 'text-[#d98e04]' : ''
                 }`}
               >
-                Resources
+                Spirituality
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
                 <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-[#d98e04] transform origin-left transition-transform duration-300 ${
-                  pathname?.startsWith('/resources') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  pathname?.startsWith('/spirituality') || pathname?.startsWith('/yoga-and-meditation') || pathname?.startsWith('/travel-destination') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                 }`} />
               </button>
 
-              {activeDropdown === 'resources' && (
+              {activeDropdown === 'spirituality' && (
                 <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-screen max-w-5xl bg-white rounded-xl shadow-xl border border-[#e8e0d6] overflow-visible z-50">
                   <div className="p-6 max-h-[80vh] overflow-y-auto">
                     <div className="flex items-center gap-2 mb-4 pb-3 border-b border-[#e8e0d6] sticky top-0 bg-white">
-                      <span className="text-2xl">{megaMenus.resources.icon}</span>
-                      <h3 className="text-lg font-bold text-gray-800">{megaMenus.resources.title}</h3>
+                      <span className="text-2xl">{megaMenus.spirituality.icon}</span>
+                      <h3 className="text-lg font-bold text-gray-800">{megaMenus.spirituality.title}</h3>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                      {megaMenus.resources.columns.map((column, idx) => (
+                      {megaMenus.spirituality.columns.map((column, idx) => (
                         <div key={idx}>
                           <h4 className="font-semibold text-gray-800 mb-3 text-sm">{column.title}</h4>
                           <ul className="space-y-2">
@@ -421,8 +527,59 @@ export default function Header() {
                                   <div className="text-sm font-medium text-gray-700 group-hover:text-[#d98e04] transition">
                                     {link.name}
                                   </div>
-                                  <div className="text-xs text-gray-400 group-hover:text-gray-500">
-                                    {link.description}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Numerlogy Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => handleDropdownEnter('numerology')}
+              onMouseLeave={handleDropdownLeave}
+            >
+              <button
+                className={`relative text-gray-700 hover:text-[#d98e04] transition-colors font-medium group flex items-center gap-1 text-sm ${
+                  pathname?.startsWith('/numerology') ? 'text-[#d98e04]' : ''
+                }`}
+              >
+                Numerology
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+                <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-[#d98e04] transform origin-left transition-transform duration-300 ${
+                  pathname?.startsWith('/numerology') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                }`} />
+              </button>
+
+              {activeDropdown === 'numerology' && (
+                <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-screen max-w-3xl bg-white rounded-xl shadow-xl border border-[#e8e0d6] overflow-visible z-50">
+                  <div className="p-6 max-h-[80vh] overflow-y-auto">
+                    <div className="flex items-center gap-2 mb-4 pb-3 border-b border-[#e8e0d6] sticky top-0 bg-white">
+                      <span className="text-2xl">{megaMenus.numerology.icon}</span>
+                      <h3 className="text-lg font-bold text-gray-800">{megaMenus.numerology.title}</h3>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      {megaMenus.numerology.columns.map((column, idx) => (
+                        <div key={idx}>
+                          <h4 className="font-semibold text-gray-800 mb-3 text-sm">{column.title}</h4>
+                          <ul className="grid grid-cols-2 gap-1">
+                            {column.links.map((link, linkIdx) => (
+                              <li key={linkIdx}>
+                                <Link
+                                  href={link.href}
+                                  className="block group"
+                                  onClick={handleNavigation}
+                                >
+                                  <div className="text-sm font-medium text-gray-700 group-hover:text-[#d98e04] transition py-1">
+                                    {link.name}
                                   </div>
                                 </Link>
                               </li>
@@ -432,56 +589,9 @@ export default function Header() {
                       ))}
                     </div>
                   </div>
-                  <div className="bg-[#f8f6f2] px-6 py-3 border-t border-[#e8e0d6]">
-                    <Link href="/resources/all" onClick={handleNavigation} className="text-sm text-[#d98e04] hover:underline flex items-center gap-1">
-                      View all resources →
-                    </Link>
-                  </div>
                 </div>
               )}
             </div>
-
-            {/* About Link */}
-            <Link
-              href="/about"
-              onClick={handleNavigation}
-              className={`relative text-gray-700 hover:text-[#d98e04] transition-colors font-medium group ${
-                pathname === '/about' ? 'text-[#d98e04]' : ''
-              }`}
-            >
-              About
-              <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-[#d98e04] transform origin-left transition-transform duration-300 ${
-                pathname === '/about' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-              }`} />
-            </Link>
-
-            {/* Ashram Link */}
-            <Link
-              href="/ashram"
-              onClick={handleNavigation}
-              className={`relative text-gray-700 hover:text-[#d98e04] transition-colors font-medium group ${
-                pathname === '/ashram' ? 'text-[#d98e04]' : ''
-              }`}
-            >
-              Ashram
-              <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-[#d98e04] transform origin-left transition-transform duration-300 ${
-                pathname === '/ashram' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-              }`} />
-            </Link>
-
-            {/* Contact Link */}
-            <Link
-              href="/contact"
-              onClick={handleNavigation}
-              className={`relative text-gray-700 hover:text-[#d98e04] transition-colors font-medium group ${
-                pathname === '/contact' ? 'text-[#d98e04]' : ''
-              }`}
-            >
-              Contact
-              <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-[#d98e04] transform origin-left transition-transform duration-300 ${
-                pathname === '/contact' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-              }`} />
-            </Link>
           </nav>
 
           {/* Right Side Actions */}
@@ -497,13 +607,13 @@ export default function Header() {
               </svg>
             </button>
 
-            {/* Daily Blessing Button */}
+            {/* Premand Ji Blessing Button */}
             <Link
-              href="/daily-blessing"
+              href="/premand-ji/daily-blessing"
               onClick={handleNavigation}
-              className="hidden sm:inline-flex px-4 py-2 bg-[#d98e04] text-white text-sm font-medium rounded-lg hover:bg-[#b87400] transition-all duration-300 shadow-sm"
+              className="hidden sm:inline-flex px-4 py-2 bg-gradient-to-r from-[#d98e04] to-[#b87400] text-white text-sm font-medium rounded-lg hover:shadow-lg transition-all duration-300"
             >
-              🙏 Daily Blessing
+              🙏 Premand Ji's Blessing
             </Link>
 
             {/* Mobile Menu Button */}
@@ -529,7 +639,7 @@ export default function Header() {
             <form onSubmit={handleSearch} className="relative">
               <input
                 type="text"
-                placeholder="Search divine teachings, discourses, articles..."
+                placeholder="Search Premand Ji's teachings, scriptures, quotes..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-4 py-3 pr-12 rounded-lg border border-[#e8e0d6] bg-white focus:outline-none focus:ring-2 focus:ring-[#d98e04] focus:border-transparent"
@@ -547,64 +657,122 @@ export default function Header() {
           </div>
         )}
 
-        {/* Mobile Menu with Categories */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-[#e8e0d6] bg-white relative z-50">
-            <div className="flex flex-col space-y-3">
+          <div className="md:hidden py-4 border-t border-[#e8e0d6] bg-white relative z-50 max-h-[calc(100vh-200px)] overflow-y-auto">
+            <div className="flex flex-col space-y-1">
               <Link href="/" onClick={handleNavigation} className="px-3 py-2 rounded-lg text-gray-700 hover:bg-[#f8f6f2] transition">
                 Home
               </Link>
               
-              {/* Mobile Teachings Section */}
-              <div className="px-3 py-2">
-                <div className="font-semibold text-gray-800 mb-2">Teachings</div>
-                <div className="pl-4 space-y-2">
-                  <Link href="/teachings/bhagavad-gita" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Bhagavad Gita</Link>
-                  <Link href="/teachings/radha-sudha-nidhi" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Radha Sudha Nidhi</Link>
-                  <Link href="/teachings/bhakti-yoga" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Bhakti Yoga</Link>
-                  <Link href="/teachings/all" onClick={handleNavigation} className="block text-sm text-[#d98e04] hover:text-[#b87400] font-medium mt-2">View all teachings →</Link>
+              {/* Premand Ji Maharaj - Featured Section */}
+              <div className="px-3 py-2 bg-gradient-to-r from-[#f8f6f2] to-[#f0ebe4] rounded-lg border border-[#e8e0d6] mx-3 mb-2">
+                <div className="font-semibold text-[#d98e04] flex items-center gap-1">
+                  🌟 Premand Ji Maharaj
+                  <span className="text-xs text-gray-500 font-normal">Featured</span>
+                </div>
+                <div className="pl-4 space-y-1 mt-1">
+                  <Link href="/premand-ji/discourses" onClick={handleNavigation} className="block text-sm text-gray-700 hover:text-[#d98e04]">Divine Discourses</Link>
+                  <Link href="/premand-ji/teachings" onClick={handleNavigation} className="block text-sm text-gray-700 hover:text-[#d98e04]">Spiritual Teachings</Link>
+                  <Link href="/premand-ji/biography" onClick={handleNavigation} className="block text-sm text-gray-700 hover:text-[#d98e04]">Life & Mission</Link>
+                  <Link href="/premand-ji/satsangs" onClick={handleNavigation} className="block text-sm text-gray-700 hover:text-[#d98e04]">Satsang Schedule</Link>
                 </div>
               </div>
               
-              {/* Mobile Satsangs Section */}
+              {/* Bhagavad Gita Section */}
               <div className="px-3 py-2">
-                <div className="font-semibold text-gray-800 mb-2">Satsangs & Events</div>
-                <div className="pl-4 space-y-2">
-                  <Link href="/satsangs/virtual" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Virtual Satsang</Link>
-                  <Link href="/satsangs/in-person" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">In-Person Satsang</Link>
-                  <Link href="/festivals/calendar" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Festival Calendar</Link>
-                  <Link href="/satsangs/all" onClick={handleNavigation} className="block text-sm text-[#d98e04] hover:text-[#b87400] font-medium mt-2">View all satsangs →</Link>
+                <div className="font-semibold text-gray-800">Bhagavad Gita</div>
+                <div className="pl-4 space-y-1">
+                  <Link href="/bhagavad-gita/leaving-family-to-become-a-sanyasi" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Leaving Family to Become Sanyasi</Link>
+                  <Link href="/bhagavad-gita/purpose-of-life-Bhagavad-Gita" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Purpose of Life</Link>
                 </div>
               </div>
-              
-              {/* Mobile Resources Section */}
+
+              {/* Divine Personalities */}
               <div className="px-3 py-2">
-                <div className="font-semibold text-gray-800 mb-2">Resources</div>
-                <div className="pl-4 space-y-2">
-                  <Link href="/tools/meditation-timer" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Meditation Timer</Link>
-                  <Link href="/media/videos" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Video Gallery</Link>
-                  <Link href="/community/forum" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Community Forum</Link>
-                  <Link href="/resources/all" onClick={handleNavigation} className="block text-sm text-[#d98e04] hover:text-[#b87400] font-medium mt-2">View all resources →</Link>
+                <div className="font-semibold text-gray-800">Divine Personalities</div>
+                <div className="pl-4 space-y-1">
+                  <Link href="/krishna/krishna-purna-avatar" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Krishna - Purna Avatar</Link>
+                  <Link href="/krishna/krishna-life-lessons" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Krishna Life Lessons</Link>
+                  <Link href="/shiva/shiva-facts" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Shiva Facts</Link>
+                  <Link href="/radha/radha-ashtami" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Radha Ashtami</Link>
                 </div>
               </div>
+
+              {/* Gurus & Saints */}
+              <div className="px-3 py-2">
+                <div className="font-semibold text-gray-800">Gurus & Saints</div>
+                <div className="pl-4 space-y-1">
+                  <Link href="/guru/biography-of-ramana-maharshi" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Ramana Maharshi</Link>
+                  <Link href="/guru/mahavatar-babaji" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Mahavatar Babaji</Link>
+                  <Link href="/guru/sai-baba-miracle-stories" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Sai Baba Miracle Stories</Link>
+                </div>
+              </div>
+
+              {/* Quotes */}
+              <div className="px-3 py-2">
+                <div className="font-semibold text-gray-800">Inspirational Quotes</div>
+                <div className="pl-4 space-y-1">
+                  <Link href="/quotes/sai-baba-quotes" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Sai Baba Quotes</Link>
+                  <Link href="/success-vivekananda-quotes-life" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Vivekananda Quotes</Link>
+                  <Link href="/top-15-osho-inspirational-quotes-on-life" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Osho Quotes</Link>
+                </div>
+              </div>
+
+              {/* Spirituality & Yoga */}
+              <div className="px-3 py-2">
+                <div className="font-semibold text-gray-800">Spirituality & Yoga</div>
+                <div className="pl-4 space-y-1">
+                  <Link href="/yoga-and-meditation/benefits-of-meditation" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Benefits of Meditation</Link>
+                  <Link href="/yoga-and-meditation/how-to-practice-mantra-japa-meditation" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Mantra Japa Meditation</Link>
+                  <Link href="/spirituality/brahma-muhurta-time-benefits" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Brahma Muhurta Benefits</Link>
+                </div>
+              </div>
+
+              {/* Holy Places */}
+              <div className="px-3 py-2">
+                <div className="font-semibold text-gray-800">Holy Places</div>
+                <div className="pl-4 space-y-1">
+                  <Link href="/travel-destination/kedarnath-yatra" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Kedarnath Yatra</Link>
+                  <Link href="/travel-destination/varanasi-yatra" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Varanasi Yatra</Link>
+                  <Link href="/travel-destination/rishikesh-yatra" onClick={handleNavigation} className="block text-sm text-gray-600 hover:text-[#d98e04]">Rishikesh Yatra</Link>
+                </div>
+              </div>
+
+              {/* Numerlogy */}
+              <div className="px-3 py-2">
+                <div className="font-semibold text-gray-800">Numerology</div>
+                <div className="pl-4 grid grid-cols-3 gap-1">
+                  {[1,2,3,4,5,6,7,8,9].map(num => (
+                    <Link 
+                      key={num}
+                      href={`/numerology/life-path-number-${num}-meaning-numerology`} 
+                      onClick={handleNavigation} 
+                      className="text-sm text-gray-600 hover:text-[#d98e04] text-center py-1 px-2 rounded hover:bg-[#f8f6f2]"
+                    >
+                      Life Path {num}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Contact & About */}
+              <div className="px-3 py-2 border-t border-[#e8e0d6] pt-3 mt-2">
+                <Link href="/about" onClick={handleNavigation} className="px-3 py-2 block text-gray-700 hover:bg-[#f8f6f2] transition rounded-lg">
+                  About
+                </Link>
+                <Link href="/contact" onClick={handleNavigation} className="px-3 py-2 block text-gray-700 hover:bg-[#f8f6f2] transition rounded-lg">
+                  Contact
+                </Link>
+              </div>
               
-              <Link href="/about" onClick={handleNavigation} className="px-3 py-2 rounded-lg text-gray-700 hover:bg-[#f8f6f2] transition">
-                About
-              </Link>
-              <Link href="/ashram" onClick={handleNavigation} className="px-3 py-2 rounded-lg text-gray-700 hover:bg-[#f8f6f2] transition">
-                Ashram
-              </Link>
-              <Link href="/contact" onClick={handleNavigation} className="px-3 py-2 rounded-lg text-gray-700 hover:bg-[#f8f6f2] transition">
-                Contact
-              </Link>
-              
-              <div className="pt-3 border-t border-[#e8e0d6]">
+              <div className="pt-3 border-t border-[#e8e0d6] px-3">
                 <Link
-                  href="/daily-blessing"
+                  href="/premand-ji/daily-blessing"
                   onClick={handleNavigation}
-                  className="block w-full px-3 py-2 text-center bg-[#d98e04] text-white rounded-lg hover:bg-[#b87400] transition"
+                  className="block w-full px-3 py-2 text-center bg-gradient-to-r from-[#d98e04] to-[#b87400] text-white rounded-lg hover:shadow-lg transition-all duration-300"
                 >
-                  🙏 Receive Daily Blessing
+                  🙏 Receive Premand Ji's Blessing
                 </Link>
               </div>
             </div>
